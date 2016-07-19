@@ -61,19 +61,6 @@ function saveToAWS(data) {
 	});
 
 }
-// function getFileName(format){
-//         return __dirname+'/backup/'+(new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''))+'.'+format;
-// }
-
-// function writeToFile(filename,data){
-// 	fs.writeFile(filename, data, function(err) {
-// 		if(err) {
-// 			console.log(err);
-// 		} else {
-// 			console.log("[SUCCESS] "+new Date()+" JSON saved to " + filename);
-// 		}
-// 	});
-// }
 
 function init() {
 	fetchData();
