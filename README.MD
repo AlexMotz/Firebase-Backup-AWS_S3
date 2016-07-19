@@ -1,4 +1,4 @@
-#Firebase Backup
+#Firebase AWS S3 Backup
 
 NodeJS app that regularly saves the contents of your Firebase Database in JSON format into an Amazon AWS S3 bucket
 
