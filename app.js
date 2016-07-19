@@ -63,7 +63,11 @@ function saveToAWS(data) {
 
 function init() {
 	fetchData();
-	setInterval(fetchData, 86400000);
+		var minutes = 1;
+		var milliseconds = minutes * 60 * 1000;
+		console.log("Interval - Minutes: ", minutes)
+		console.log("Interval - Milliseconds: ", milliseconds)
+	setInterval(fetchData, milliseconds);
 }
 
 init();
