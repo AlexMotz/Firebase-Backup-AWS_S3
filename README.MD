@@ -1,6 +1,6 @@
 #Firebase Backup
 
-NodeJS app that regularly saves the contents of your Firebase Database into a JSON format into an Amazon AWS S3 bucket
+NodeJS app that regularly saves the contents of your Firebase Database in JSON format into an Amazon AWS S3 bucket
 
 ###ENV VARS Required
 ``` plaintext
@@ -15,5 +15,4 @@ AWS_SECRET_ACCESS_KEY=
 BUCKET_NAME=
 STATIC_NAME=
 
-SAVE_INTERVAL_MINUTES=
-'''
+SAVE_INTERVAL_MINUTES=```
