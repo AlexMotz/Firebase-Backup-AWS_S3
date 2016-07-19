@@ -6,8 +6,8 @@ var https = require('https'),fs = require('fs');
 var AWS = require('aws-sdk');
 var moment = require('moment');
 
-var FIREBASE_URL = process.env.FIREBASE_DATABASE_URL
-var FIREBASE_SECRET = process.env.FIREBASE_SECRET
+var FIREBASE_URL = process.env.FIREBASE_DATABASE_URL;
+var FIREBASE_SECRET = process.env.FIREBASE_SECRET;
 
 function fetchData(){
 
@@ -19,15 +19,14 @@ function fetchData(){
 			completeResponse += chunk;
 		});
 		response.on('end', function() {
-			console.log('Complete Response: ', completeResponse)
+			//console.log('Complete Response: ', completeResponse)
 			saveToAWS(completeResponse);
 		})
 	}).on('error', function (e) {
-		console.log('[ERROR] ' + momnet(now) + ' problem with request: ' + e.message);
+		console.log('[ERROR] ' + moment().format() + ' problem with request');
 	});
 
 }
-
 
 function saveToAWS(data) {
 	var bucket_name = 'verre-firebase-backup';
@@ -66,6 +65,5 @@ function init() {
 	fetchData();
 	setInterval(fetchData, 86400000);
 }
-
 
 init();
