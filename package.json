@@ -1,0 +1,12 @@
+{
+  "name": "firebase-backup",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Alex Motz <alexmotz@me.com>",
+  "license": "All Rights Reserved.",
+  "dependencies": {
+    "aws-sdk": "^2.4.7",
+    "dotenv": "^2.0.0",
+    "moment": "^2.14.1"
+  }
+}
