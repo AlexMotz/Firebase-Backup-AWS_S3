@@ -29,13 +29,13 @@ function fetchData(){
 }
 
 function saveToAWS(data) {
-	var bucket_name = 'verre-firebase-backup';
+	var bucket_name = process.env.BUCKET_NAME;
 
 	var folder_month = moment().format("MM - MMMM, YYYY");
 	var folder_day = moment().format("MM-DD-YYYY - dddd");
 
 	var filename_time = moment().format("h:mm:ss a - dddd, MMMM Do YYYY ");
-	var static_name = '--- Verre_FB_Backup';
+	var static_name = process.env.STATIC_NAME;
 	var extension = '.json';
 	var filename = filename_time + static_name + extension;
 	
@@ -58,7 +58,6 @@ function saveToAWS(data) {
 	    }
 	  });
 	});
-
 }
 
 function init() {
